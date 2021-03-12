@@ -1,0 +1,2 @@
+# Tic-tac-toe-with-AI
+Tic-tac-toe with simple artificial intelligence. Your opponent knows that the central square of the playing field is the most important, and understands that first of all you need to make a move that will ensure victory, or make a move that will not allow the player to win.   Крестики-нолики с простым искусственным интеллектом. Ваш противник знает, что центральная клетка игрового поля  - самая важная, и понимает, что в первую очередь надо сделать ход, который обеспечит победу, либо сделать ход, который не даст выиграть игроку.
