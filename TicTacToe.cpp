@@ -5,16 +5,16 @@ using namespace std;
 
 void results(int win, int lose)
 {
-	cout << "Ñ÷¸ò " << win << " : " << lose;
-	if (win > lose)cout << " â ïîëüçó ÈÃÐÎÊÀ\n";
-	else if (win < lose)cout << " â ïîëüçó ÊÎÌÏÜÞÒÅÐÀ\n";
-	else cout << " ðàâíûé.\n";
+	cout << "Ð¡Ñ‡Ñ‘Ñ‚ " << win << " : " << lose;
+	if (win > lose)cout << " Ð² Ð¿Ð¾Ð»ÑŒÐ·Ñƒ Ð˜Ð“Ð ÐžÐšÐ\n";
+	else if (win < lose)cout << " Ð² Ð¿Ð¾Ð»ÑŒÐ·Ñƒ ÐšÐžÐœÐŸÐ¬Ð®Ð¢Ð•Ð Ð\n";
+	else cout << " Ñ€Ð°Ð²Ð½Ñ‹Ð¹.\n";
 }
 
 void draw(char arr[3][3])
 {
 	system("cls");
-	cout << " ÊÐÅÑÒÈÊÈ-ÍÎËÈÊÈ\n\n     0  1  2" << endl;
+	cout << " ÐšÐ Ð•Ð¡Ð¢Ð˜ÐšÐ˜-ÐÐžÐ›Ð˜ÐšÐ˜\n\n     0  1  2" << endl;
 	for (short i = 0; i < 3; i++)
 	{
 		cout << "   " << i;
@@ -37,11 +37,11 @@ int main()
 	while (true) {
 		res = 0;
 		draw(arr);
-		cout << "Áðîñàåì æðåáèé\n";
+		cout << "Ð‘Ñ€Ð¾ÑÐ°ÐµÐ¼ Ð¶Ñ€ÐµÐ±Ð¸Ð¹\n";
 		ai = rand() % 2;
 		Sleep(1000);
-		if (ai == true) cout << "Ïåðâûì õîäèò ÊÎÌÏÜÞÒÅÐ";
-		else cout << "Ïåðâûì õîäèò ÈÃÐÎÊ";
+		if (ai == true) cout << "ÐŸÐµÑ€Ð²Ñ‹Ð¼ Ñ…Ð¾Ð´Ð¸Ñ‚ ÐšÐžÐœÐŸÐ¬Ð®Ð¢Ð•Ð ";
+		else cout << "ÐŸÐµÑ€Ð²Ñ‹Ð¼ Ñ…Ð¾Ð´Ð¸Ñ‚ Ð˜Ð“Ð ÐžÐš";
 		cout << endl;
 		Sleep(1000);
 		while (true)
@@ -54,7 +54,7 @@ int main()
 				checkh = -1, checkv = -1, iwinh = -1, iwinv = -1; bh = -1, bhr = -1, bv = -1, bvr = -1, bd = -1, br = -1;
 			}
 			system("cls");
-			cout << " ÊÐÅÑÒÈÊÈ-ÍÎËÈÊÈ\n\n     0  1  2" << endl;
+			cout << " ÐšÐ Ð•Ð¡Ð¢Ð˜ÐšÐ˜-ÐÐžÐ›Ð˜ÐšÐ˜\n\n     0  1  2" << endl;
 			for (short i = 0; i < 3; i++)
 			{
 				cout << "   " << i;
@@ -142,19 +142,19 @@ int main()
 			{
 				if (res == 1)
 				{
-					cout << "Òû ïîáåäèë\n";
+					cout << "Ð¢Ñ‹ Ð¿Ð¾Ð±ÐµÐ´Ð¸Ð»\n";
 					win++;
 					results(win, lose);
 				}
 				else if (res == 2)
 				{
-					cout << "Ïîáåäèë êîìïüþòåð\n";
+					cout << "ÐŸÐ¾Ð±ÐµÐ´Ð¸Ð» ÐºÐ¾Ð¼Ð¿ÑŒÑŽÑ‚ÐµÑ€\n";
 					lose++;
 					results(win, lose);
 				}
 				else if (res == 3)
 				{
-					cout << "Íè÷üÿ\n";
+					cout << "ÐÐ¸Ñ‡ÑŒÑ\n";
 					results(win, lose);
 				}
 				break;
@@ -162,14 +162,14 @@ int main()
 			if (ai == false)
 			{
 				do {
-					cout << "Ââåäèòå àäðåñ êëåòêè: ";
+					cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð°Ð´Ñ€ÐµÑ ÐºÐ»ÐµÑ‚ÐºÐ¸: ";
 					cin >> a >> b;
 				} while (arr[a][b] != 0 || a < 0 || b < 0 || a>2 || b>2);
 				arr[a][b] = 'X';
 			}
 			else
 			{
-				cout << "Õîä êîìïüþòåðà";
+				cout << "Ð¥Ð¾Ð´ ÐºÐ¾Ð¼Ð¿ÑŒÑŽÑ‚ÐµÑ€Ð°";
 				Sleep(1000);
 				if (arr[1][1] == 0)arr[1][1] = 'O';
 				else if (iwinh >= 0)arr[iwinh][bh] = 'O';
@@ -192,7 +192,7 @@ int main()
 			}
 			ai = !ai;
 		}
-		cout << "Ñûãðàåì åù¸?    1-äà/0-íåò\n";
+		cout << "Ð¡Ñ‹Ð³Ñ€Ð°ÐµÐ¼ ÐµÑ‰Ñ‘?    1-Ð´Ð°/0-Ð½ÐµÑ‚\n";
 		cin >> ai;
 		if (ai == 1)
 		{
